@@ -7,12 +7,14 @@ class ProductTag extends Model {}
 ProductTag.init(
   {
     // define columns
+    // This table is the many to many relation that relates the product and tag table/model
     id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+      type: DataTypes.INTEGER, /* id is an integer (whole number) */
+      allowNull: false, /* id cannot be null */
+      primaryKey: true, /* each value is unique */
+      autoIncrement: true, /* automatically increase by 1 each time a new product tag relationship is created */
     },
+    // This column will store a reference of the "id" of the "product"
     product_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -20,6 +22,7 @@ ProductTag.init(
         key: "id",
       },
     },
+    // This column will store a reference of the "id" of the "tag"
     tag_id: {
       type: DataTypes.INTEGER,
       references: {

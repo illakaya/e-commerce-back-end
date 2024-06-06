@@ -11,27 +11,27 @@ Product.init(
   {
     // define columns
     id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+      type: DataTypes.INTEGER, /* id is an integer (whole number) */
+      allowNull: false, /* id cannot be null */
+      primaryKey: true, /* has to be primary key to be used as for a foreign key */
+      autoIncrement: true, /* automatically increase by 1 each time a new category is created */
     },
     product_name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false, /* product name must not be an empty string */
     },
     price: {
       type: DataTypes.DECIMAL(10, 2) /* 10 digits in total, 2 decimal places */,
-      allowNull: false,
+      allowNull: false, /* price cannot be null*/
       validate: {
-        isNumeric: true,
+        isNumeric: true, /* checks if the input is a number */
       },
     },
     stock: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: false, /* stock is to be assigned an integer and cannot be null */
       validate: {
-        isInt: true,
+        isInt: true, /* checks if the input is an integer (whole number) */
       },
     },
     // This column will store a reference of the "id" of the "category" that the product fits into

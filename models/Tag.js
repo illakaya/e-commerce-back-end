@@ -8,13 +8,13 @@ Tag.init(
   {
     // define columns
     id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+      type: DataTypes.INTEGER, /* id is an integer (whole number) */
+      allowNull: false, /* id cannot be null */
+      primaryKey: true, /* has to be primary key to be used as for a foreign key */
+      autoIncrement: true, /* automatically increase by 1 each time a new category is created */
     },
     tag_name: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING, /* product name is to be a string, readME did not specify the allowNull property */
     },
   },
   {

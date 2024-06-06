@@ -4,7 +4,8 @@ const Category = require("./Category");
 const Tag = require("./Tag");
 const ProductTag = require("./ProductTag");
 
-// Swapped the order as Category to Products is One to Many
+// Swapped the order that was originally given 
+// Follow the Category to Products = One to Many Relation
 // Categories have many Products
 Category.hasMany(Product, {
   foreignKey: "category_id",

@@ -11,6 +11,10 @@ This project was constructed in order to build the back end for an e-commerce si
 - Data validation
 - Data relations/associations
 
+The image below shows the application in Insomnia.
+![image](https://github.com/illakaya/e-commerce-back-end/assets/161125561/8cc8c954-2c07-4434-a974-1711103890c7)
+
+
 ## Installation
 
 Run `npm i` in the terminal to install necessary packages to use the application.
